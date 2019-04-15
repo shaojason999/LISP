@@ -1,0 +1,13 @@
+(defun palindrome (input)
+	(if (equal input (reverse input))
+		(format t "it's a palindrome~%")
+		(format t "it's not a palindrome~%")
+	)
+	; or you can use dolist with (append)
+)
+
+(palindrome '(a b c ) )
+(palindrome '(m a d a m))
+(palindrome '(cat dog))
+(palindrome '())
+(palindrome '(cat dog bird bird dog cat))
