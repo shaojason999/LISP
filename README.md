@@ -20,4 +20,4 @@ Mergesort:
 ### 一些特別函式說明
 1. append, cons, list都各有不同，解決問題遇到困難時可以換一個試試看
 2. 用(reverse list)可以解決蠻多問題
-3. (nthcdr n list)為取得list的第n的element(從左邊從0開始數)(好幾次cdr再car)
+3. (nthcdr n list)為取得list的第個element開始的list(從左邊從0開始數)(好幾次cdr)
