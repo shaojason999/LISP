@@ -1,6 +1,6 @@
 (defun tail_fib2 (now n a b)
 	(if (= now n)
-		(format t "~a~%" b)
+		(return-from tail_fib2 b)
 		(tail_fib2 (+ now 1) n b (+ a b))
 	)
 )
