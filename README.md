@@ -56,7 +56,34 @@ $ sbcl --script problem_2.isp
 9 8 16 2 7 199 0 98 1 29
 ```
 
+### Problem 3
+實作Linux系統的diff(比較兩個檔案)  
+匹配:  
+* 先把檔案A的每一行去跟B的每一行比對，得到A的每一行分別跟B的哪幾行配對到，比如A的第3行跟B的1 3 6 7 13行配對到，如此得到一個list (1 3 6 7 13)，然後可以得到n個list (n為A的行數)，然後從這n個list中各選出0個或1個element，排成最長的由小到大的序列。比如從第1個list取3，第2個list取5，第5個list取8->得到(3 5 8)以及來源。  
+
+印出:  
+* 印出的方式為用B的(3 5 8)行去找到跟A匹配的行數，找到之前把A的都以-“string”印出，再把B的都匹配前的行數以+”string”印出，然後印出匹配的那行”string”。接著再印A，再印B，再印匹配…最後把B的第8行印出來後，剩下的A都以-“string”印出，以及剩下的B以+”string”印出  
+
+#### Program執行方式: 如果要修改輸入檔名，請在程式碼的第一二行做修改(預設為file1.txt 以及 file2.txt)  
+```
+$ sbcl --script problem_3.lsp
+-#include <stdio.h>
++#include <iostream>
++using namespace std;
+ int main() {
+-	printf(“Hello World”);
++	cout << “Hello World” << end;
+ 	return 0;
+ }
+```
+
+---
 ### 一些特別函式說明
 1. append, cons, list都各有不同，解決問題遇到困難時可以換一個試試看
 2. 用(reverse list)可以解決蠻多問題
 3. (nthcdr n list)為取得list的第個element開始的list(從左邊從0開始數)(好幾次cdr)
+
+### 其他資料  
+[Online Common-Lisp](https://common-lisp.net/downloads)  
+[自己做的一點筆記](https://hackmd.io/jZSMG0wSQnS3e5kmVg7Rgg)  
+[主要學習網站](https://acl.readthedocs.io/en/latest/zhTW/index.html)  
