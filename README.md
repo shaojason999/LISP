@@ -57,8 +57,9 @@ $ sbcl --script problem_2.isp
 ```
 
 ### Problem 3
-用LCS(Longest Common Subsequence)做會比較好，但這次作業時間比較緊迫，僅完成比較暴力的方式
-實作Linux系統的diff(比較兩個檔案)  
+實作Linux系統的diff(比較兩個檔案):  
+  
+用LCS(Longest Common Subsequence)做會比較好，但這次作業時間比較緊迫，僅完成比較暴力的方式  
 匹配:  
 * 先把檔案A的每一行去跟B的每一行比對，得到A的每一行分別跟B的哪幾行配對到，比如A的第3行跟B的1 3 6 7 13行配對到，如此得到一個list (1 3 6 7 13)，然後可以得到n個list (n為A的行數)，然後從這n個list中各選出0個或1個element，排成最長的由小到大的序列。比如從第1個list取3，第2個list取5，第5個list取8->得到(3 5 8)以及來源。  
 
